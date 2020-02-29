@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  googleApiKey: 'AIzaSyBHHQlFFG8pkHo3Z_uA4GdSYofKZzRD-uQ',
+  googleApiKey: 'your-api-key',
   libraries: ['places'],
-  weatherUrl: 'https://api.darksky.net/forecast/f6f0c2293d4a816d6975048834e84c05/',
+  weatherUrl: 'https://api.darksky.net/forecast/your-api-key/',
   units: '?uniits=auto'
 };
 
