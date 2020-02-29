@@ -5,7 +5,9 @@ import { MDBBootstrapModule, WavesModule, ButtonsModule, CardsModule } from 'ang
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AgmCoreModule } from '@agm/core'
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,12 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     WavesModule,
     ButtonsModule,
-    CardsModule
+    CardsModule,
+    ReactiveFormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: environment.googleApiKey,
+      libraries: environment.libraries
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

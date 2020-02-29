@@ -4,10 +4,12 @@
             <canvas width="100" height="100"></canvas>
         </div>
         <form class="form-inline md-form form-sm active-cyan-2 mt-2">             
-            <input mdbInput type="text" id="search" class="form-control white-text mr-3 w-75" [(ngModel)]="location" #address>
-            <label class="white-text" for="search">LOCATION</label>
+            <input mdbInput type="text" id="address" class="form-control white-text mr-3 w-75" [formControl]="location" #search
+            autocomplete="off" autocapitalize="off" spellcheck="off">
+            <label class="white-text" for="address">LOCATION</label>
             <i class="fas fa-search search" mdbWavesEffect (click)="search()" aria-hidden="true"></i>
           </form>
+          <button (click)="output()">click</button>
     </div>
     <a href="https://darksky.net/poweredby" class="copyright">Powered by Dark Sky</a>
 </section>
